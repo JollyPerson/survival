@@ -1,5 +1,7 @@
 ﻿using System;
-public class Player
+using UnityEngine;
+
+public class Player : MonoBehaviour
 {
     public Player()
     {

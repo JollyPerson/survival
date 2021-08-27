@@ -86,7 +86,7 @@ public class AsyncClient : IDisposable
             {
                 Packet p = Packet.Deserialize(state.Message);
 
-                OnPacketReceived?.Invoke(this, new PacketReceivedEventArgs { Packet = p });
+                OnPacketReceived?.Invoke(this, new PacketEventArgs { Packet = p });
 
                 state.Message.Clear();
             }
@@ -109,7 +109,7 @@ public class AsyncClient : IDisposable
 
     }
 
-    internal delegate void PacketReceivedEvent(object sender, PacketReceivedEventArgs e);
+    internal delegate void PacketReceivedEvent(object sender, PacketEventArgs e);
 
     
     public void Shutdown()

@@ -18,8 +18,9 @@ public class MessageHandler : MonoBehaviour
 
     }
 
-    void SendMessage()
+    public void SedMessage()
     {
+        Debug.Log("test");
         NetworkManager.INSTANCE.SendPacket(new Packet() { Data = new MessagePacketData(field.text), Type = PacketType.MESSAGE });
     }
 }
